@@ -1,7 +1,10 @@
 package conf
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 var (
-	ServicePort = os.Getenv("SERVICE_PORT")
+	ServicePort = fmt.Sprintf(":%s", os.Getenv("PORT"))
 )
